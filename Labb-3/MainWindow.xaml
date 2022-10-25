@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Labb_3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" >
     <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" /> <!-- 0 -->
+            <ColumnDefinition Width="auto" /> <!-- 1 -->
+            <ColumnDefinition Width="auto" /> <!-- 2 -->
+            <ColumnDefinition Width="auto" /> <!-- 3 -->
+            <ColumnDefinition Width="auto" /> <!-- 4 -->
+            <ColumnDefinition Width="auto" /> <!-- 5 -->
+            <ColumnDefinition Width="auto" /> <!-- 6 -->
+            <ColumnDefinition Width="auto" /> <!-- 7 -->
+            <ColumnDefinition Width="auto" /> <!-- 8 -->
+            <ColumnDefinition Width="auto" /> <!-- 9 -->
+            <ColumnDefinition Width="auto" /> <!-- 10 -->
+            <ColumnDefinition Width="*" /> <!-- 11 -->
+            <ColumnDefinition Width="20" /> <!-- 12 -->
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" /> <!-- 0 -->
+            <RowDefinition Height="auto" /> <!-- 1 -->
+            <RowDefinition Height="auto" /> <!-- 2 -->
+            <RowDefinition Height="auto" /> <!-- 3 -->
+            <RowDefinition Height="auto" /> <!-- 4 -->
+            <RowDefinition Height="auto" /> <!-- 5 -->
+            <RowDefinition Height="auto" /> <!-- 6 -->
+            <RowDefinition Height="auto" /> <!-- 7 -->
+            <RowDefinition Height="auto" /> <!-- 8 -->
+            <RowDefinition Height="auto" /> <!-- 9 -->
+            <RowDefinition Height="auto" /> <!-- 10 -->
+            <RowDefinition Height="*" /> <!-- 11 -->
+            <RowDefinition Height="20" /> <!-- 12 -->
+        </Grid.RowDefinitions>
+
+        
+        <ListBox Grid.Column="2" Grid.Row="2"
+                 x:Name="lstbox" />
+
+        <TextBlock Grid.Column="4" Grid.Row="3" FontWeight="Bold"
+                   Text="Datum"  />
+        
+        <DatePicker Grid.Column="4" Grid.Row="4"/>
+
+        <TextBlock Grid.Column="6" Grid.Row="3" FontWeight="Bold"
+                   Text="Namn"  />
+
+        <TextBox Grid.Column="6" Grid.Row="4" />
 
     </Grid>
 </Window>
