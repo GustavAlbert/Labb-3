@@ -7,6 +7,10 @@
         mc:Ignorable="d" 
         Title="MainWindow" Height="450" Width="800" >
     <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/dining_mobile.jpg" Stretch="Fill"  />
+        </Grid.Background>
         
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" /> <!-- 0 -->
