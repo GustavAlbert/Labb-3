@@ -49,9 +49,8 @@
         Even numbers, e.g. 2, 4, 6 = Contains data
         
         -->
-        
-        
-        <!-- COLUMN 2 -->
+
+            <!-- COLUMN 2 -->
         
         <ListBox Grid.Column="2" Grid.Row="2" Grid.RowSpan="10"
                  x:Name="lstbox" Width="175"> 
