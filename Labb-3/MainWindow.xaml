@@ -7,7 +7,7 @@
         mc:Ignorable="d" 
         Title="MainWindow" Height="450" Width="800" >
     <Grid>
-
+        
         <Grid.Background>
             <ImageBrush ImageSource="/img/dining_mobile.jpg" Stretch="Fill"  />
         </Grid.Background>
@@ -54,7 +54,7 @@
         
         -->
 
-            <!-- COLUMN 2 -->
+        <!-- COLUMN 2 -->
         
         <ListBox Grid.Column="2" Grid.Row="2" Grid.RowSpan="10"
                  x:Name="lstbox" Width="175"> 
@@ -63,14 +63,20 @@
         </ListBox>
 
         <!-- COLUMN 4 -->
-        
-        <TextBlock Grid.Column="4" Grid.Row="2" FontWeight="Bold"
-                   Text="Datum"  />
-        
-        <DatePicker Grid.Column="4" Grid.Row="4"/>
 
-        <TextBlock Grid.Column="4" Grid.Row="6" FontWeight="Bold"
-                   Text="Tid"  />
+        <TextBlock 
+            Grid.Column="4" Grid.Row="2" 
+            Text="Datum" FontWeight="Bold" Foreground="White" >
+        </TextBlock>
+
+        <DatePicker 
+            Grid.Column="4" Grid.Row="4">
+        </DatePicker>
+
+        <TextBlock 
+            Grid.Column="4" Grid.Row="6" 
+            Text="Tid" FontWeight="Bold" Foreground="White" >
+        </TextBlock>
 
         <ComboBox
             x:Name="ComboBoxTime"
@@ -83,7 +89,7 @@
             <Button
                 x:Name="btnbook" Content="Boka"
                 Grid.Column="4" Grid.Row="10" 
-                Height="30"
+                Height="30" Click="btnbook_Click"
                 >
             </Button>
 
@@ -91,7 +97,7 @@
             <Button
                 x:Name="btnShowBookings" Content="Visa Bokningar"
                 Grid.Column="4" Grid.Row="12"
-                Height="30"
+                Height="30" Click="btnShowBookings_Click"
                 >
             </Button>
         
@@ -99,7 +105,7 @@
             <Button
                 x:Name="btnCancelBooking" Content="Avboka" 
                 Grid.Column="4" Grid.Row="14"
-                Height="30"
+                Height="30" Click="btnCancelBooking_Click"
                 >
             </Button>
 
@@ -107,13 +113,19 @@
 
         <!-- COLUMN 6 -->
 
-        <TextBlock Grid.Column="6" Grid.Row="2" FontWeight="Bold"
-                   Text="Namn"  />
+        <TextBlock 
+            Grid.Column="6" Grid.Row="2" 
+            Text="Namn" Foreground="White" FontWeight="Bold">
+        </TextBlock>
 
-        <TextBox Grid.Column="6" Grid.Row="4" />
+        <TextBox Grid.Column="6" Grid.Row="4" 
+                 x:Name="CustommerName"
+                 />
 
-        <TextBlock Grid.Column="6" Grid.Row="6" FontWeight="Bold"
-                   Text="Bordsnummer"  />
+        <TextBlock 
+            Grid.Column="6" Grid.Row="6" 
+            Text="Bordsnummer" Foreground="White" FontWeight="Bold" >
+        </TextBlock>
 
         <ComboBox 
             x:Name="ComboBoxTablenumber"
