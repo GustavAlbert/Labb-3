@@ -50,12 +50,18 @@ namespace Labb_3
 
     public class Booking
     {
+        public string Name { get; set; }
         public int TableNumber { get; set; }
         public DateTime Date { get; set; }
-        public Booking (int tablenNumber, DateTime datetime)
+        public Booking (string name, int tablenNumber, DateTime datetime)
         {
+            Name = name;
             TableNumber = tablenNumber;
             Date = datetime;
+        }
+        public string ListBookings()
+        {
+            
         }
     }
 }

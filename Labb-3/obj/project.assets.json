@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gusta\\.nuget\\packages\\": {},
+    "C:\\Users\\Gustav Albert\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gusta\\Desktop\\Labb3\\Labb-3\\Labb-3.csproj",
+      "projectUniqueName": "C:\\Users\\Gustav Albert\\Desktop\\Labb 3\\Labb-3\\Labb-3.csproj",
       "projectName": "Labb-3",
-      "projectPath": "C:\\Users\\gusta\\Desktop\\Labb3\\Labb-3\\Labb-3.csproj",
-      "packagesPath": "C:\\Users\\gusta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gusta\\Desktop\\Labb3\\Labb-3\\obj\\",
+      "projectPath": "C:\\Users\\Gustav Albert\\Desktop\\Labb 3\\Labb-3\\Labb-3.csproj",
+      "packagesPath": "C:\\Users\\Gustav Albert\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Gustav Albert\\Desktop\\Labb 3\\Labb-3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gusta\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Gustav Albert\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
