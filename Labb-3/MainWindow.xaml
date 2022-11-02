@@ -56,8 +56,9 @@
 
         <!-- COLUMN 2 -->
         
-        <ListBox Grid.Column="2" Grid.Row="2" Grid.RowSpan="10"
-                 x:Name="lstbox" Width="175"> 
+        <ListBox 
+            Grid.Column="2" Grid.Row="2" Grid.RowSpan="10"
+            x:Name="lstboxListBookings" Width="175" > 
                 <!--<ListBoxItem>
                 </ListBoxItem>-->
         </ListBox>
@@ -70,7 +71,9 @@
         </TextBlock>
 
         <DatePicker 
-            Grid.Column="4" Grid.Row="4">
+            Grid.Column="4" Grid.Row="4"
+            x:Name="dtpSelecter"
+            >
         </DatePicker>
 
         <TextBlock 
@@ -81,6 +84,15 @@
         <ComboBox
             x:Name="ComboBoxTime"
             Grid.Column="4" Grid.Row="8">
+            <ComboBoxItem>17:00</ComboBoxItem>
+            <ComboBoxItem>17:30</ComboBoxItem>
+            <ComboBoxItem>18:00</ComboBoxItem>
+            <ComboBoxItem>18:30</ComboBoxItem>
+            <ComboBoxItem>19:00</ComboBoxItem>
+            <ComboBoxItem>19:30</ComboBoxItem>
+            <ComboBoxItem>20:00</ComboBoxItem>
+            <ComboBoxItem>20:30</ComboBoxItem>
+            <ComboBoxItem>21:00</ComboBoxItem>
         </ComboBox>
 
         <!-- BUTTON -->
@@ -119,7 +131,7 @@
         </TextBlock>
 
         <TextBox Grid.Column="6" Grid.Row="4" 
-                 x:Name="CustommerName"
+                 x:Name="txtCustommerName"
                  />
 
         <TextBlock 
@@ -129,7 +141,13 @@
 
         <ComboBox 
             x:Name="ComboBoxTablenumber"
-            Grid.Column="6" Grid.Row="8">
+            Grid.Column="6" Grid.Row="8"
+            >
+            <GroupItem>1</GroupItem>
+            <GroupItem>2</GroupItem>
+            <GroupItem>3</GroupItem>
+            <GroupItem>4</GroupItem>
+            <GroupItem>5</GroupItem>
         </ComboBox>
         
        <!-- COLUMN 8 -->

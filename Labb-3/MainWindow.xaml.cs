@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Printing;
 using System.Text;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MyClasses_Labb3;
 
 namespace Labb_3
 {
@@ -22,6 +24,7 @@ namespace Labb_3
     public partial class MainWindow : Window
     {
         public List<Booking> Bookings { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,14 +34,23 @@ namespace Labb_3
 
         private void btnbook_Click(object sender, RoutedEventArgs e)
         {
+            var booking =   new Booking
+                            (txtCustommerName.Text, 
+                            Convert.ToInt32(ComboBoxTablenumber.Text), 
+                            dtpSelecter.SelectedDate.Value, 
+                            ComboBoxTime.Text);
 
+            Bookings.Add(booking);
         }
 
         private void btnShowBookings_Click(object sender, RoutedEventArgs e)
         {
             foreach (var Booking in Bookings)
             {
-
+                lstboxListBookings.Items.Add
+                ("Namn; " + Booking.Name + 
+                " Datum; " + Booking.Date.ToShortDateString() + " Klockan " + Booking.Time + 
+                " Bord " + Booking.TableNumber);
             }
         }
 
@@ -48,20 +60,22 @@ namespace Labb_3
         }
     }
 
-    public class Booking
-    {
-        public string Name { get; set; }
-        public int TableNumber { get; set; }
-        public DateTime Date { get; set; }
-        public Booking (string name, int tablenNumber, DateTime datetime)
-        {
-            Name = name;
-            TableNumber = tablenNumber;
-            Date = datetime;
-        }
-        public string ListBookings()
-        {
+
+
+    //public class Booking
+    //{
+    //    public string Name { get; set; }
+    //    public int TableNumber { get; set; }
+    //    public DateTime Date { get; set; }
+    //    public Booking (string name, int tablenNumber, DateTime datetime)
+    //    {
+    //        Name = name;
+    //        TableNumber = tablenNumber;
+    //        Date = datetime;
+    //    }
+    //    public string ListBookings()
+    //    {
             
-        }
-    }
+    //    }
+    //}
 }
