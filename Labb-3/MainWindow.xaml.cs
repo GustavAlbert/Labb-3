@@ -30,52 +30,67 @@ namespace Labb_3
             InitializeComponent();
 
             Bookings = new List<Booking>();
+
+            //Bookings.Add();
+            //Bookings.Add();
+            //Bookings.Add();
+
         }
+        
+        private bool isTableAvailable(int tableNumber, DateTime timeSlot)
+        {
+            foreach (var booking in Bookings)
+            {
+                if (booking.Date == timeSlot && booking.TableNumber == tableNumber)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
 
         private void btnbook_Click(object sender, RoutedEventArgs e)
         {
-            var booking =   new Booking
-                            (txtCustommerName.Text, 
-                            Convert.ToInt32(ComboBoxTablenumber.Text), 
-                            dtpSelecter.SelectedDate.Value, 
-                            ComboBoxTime.Text);
+            var timeSlot = dtpSelecter.SelectedDate.Value;
 
-            Bookings.Add(booking);
+            bool ifTableAvailable = isTableAvailable(Int32.Parse(ComboBoxTablenumber.Text), timeSlot);
+
+            if (ifTableAvailable)
+            {
+                var presentBooking = new Booking
+                                (txtCustommerName.Text,
+                                Convert.ToInt32(ComboBoxTablenumber.Text),
+                                dtpSelecter.SelectedDate.Value,
+                                ComboBoxTime.Text);
+
+                Bookings.Add(presentBooking);
+
+                MessageBox.Show("Ditt bord har reserverats, hoppas du får en trevlig sittning");
+
+            }
+            else
+            {
+                MessageBox.Show("Inga bord är tillgängliga vid " + ComboBoxTime.Text + ", välj en annan tid");
+            }
         }
+
 
         private void btnShowBookings_Click(object sender, RoutedEventArgs e)
         {
             foreach (var Booking in Bookings)
             {
                 lstboxListBookings.Items.Add
-                ("Namn; " + Booking.Name + 
-                " Datum; " + Booking.Date.ToShortDateString() + " Klockan " + Booking.Time + 
+                ("Namn; " + Booking.Name +
+                " Datum; " + Booking.Date.ToShortDateString() + " Klockan " + Booking.Time +
                 " Bord " + Booking.TableNumber);
             }
         }
+
 
         private void btnCancelBooking_Click(object sender, RoutedEventArgs e)
         {
 
         }
     }
-
-
-
-    //public class Booking
-    //{
-    //    public string Name { get; set; }
-    //    public int TableNumber { get; set; }
-    //    public DateTime Date { get; set; }
-    //    public Booking (string name, int tablenNumber, DateTime datetime)
-    //    {
-    //        Name = name;
-    //        TableNumber = tablenNumber;
-    //        Date = datetime;
-    //    }
-    //    public string ListBookings()
-    //    {
-            
-    //    }
-    //}
 }
