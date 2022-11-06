@@ -20,10 +20,13 @@ namespace MyClasses_Labb3
             Date = datetime;
             Time = time;
         }
-        public string ListBookings()
+
+        public override string ToString()
         {
-            string output = Date + ", " + Name + ", " + TableNumber + Time;
-            return output;
+
+            return "Namn; " + Name +
+            " Datum; " + Date.ToShortDateString() + " Klockan " + Time +
+            " Bord " + TableNumber;
 
         }
     }

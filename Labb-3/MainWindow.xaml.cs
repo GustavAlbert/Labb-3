@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MyClasses_Labb3;
 
+
 namespace Labb_3
 {
     /// <summary>
@@ -35,8 +36,6 @@ namespace Labb_3
             //Bookings.Add();
             //Bookings.Add();
             //Bookings.Add();
-
-            //Bookings.
 
         }
 
@@ -78,24 +77,27 @@ namespace Labb_3
             }
         }
 
-
         private void btnShowBookings_Click(object sender, RoutedEventArgs e)
         {
             lstboxListBookings.Items.Clear();
 
-            foreach (var Booking in Bookings)
+            foreach (var booking in Bookings)
             {
-                lstboxListBookings.Items.Add
-                ("Namn; " + Booking.Name +
-                " Datum; " + Booking.Date.ToShortDateString() + " Klockan " + Booking.Time +
-                " Bord " + Booking.TableNumber);
+                lstboxListBookings.Items.Add(booking);
             }
         }
 
 
         private void btnCancelBooking_Click(object sender, RoutedEventArgs e)
         {
-            lstboxListBookings.Items.Remove(lstboxListBookings.SelectedItem.ToString);
+            var booking = (Booking) lstboxListBookings.SelectedItem;
+
+            if (booking != null)
+            {
+                Bookings.Remove(booking);
+                MessageBox.Show("Booking cancelled");
+            }
+            else MessageBox.Show("Välj en bokning");
         }
     }
 }
