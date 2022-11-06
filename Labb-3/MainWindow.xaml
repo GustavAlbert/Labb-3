@@ -85,13 +85,21 @@
             x:Name="ComboBoxTime"
             Grid.Column="4" Grid.Row="8">
             <ComboBoxItem>17:00</ComboBoxItem>
+            <ComboBoxItem>17:15</ComboBoxItem>
             <ComboBoxItem>17:30</ComboBoxItem>
+            <ComboBoxItem>17:45</ComboBoxItem>
             <ComboBoxItem>18:00</ComboBoxItem>
+            <ComboBoxItem>18:15</ComboBoxItem>
             <ComboBoxItem>18:30</ComboBoxItem>
+            <ComboBoxItem>18:45</ComboBoxItem>
             <ComboBoxItem>19:00</ComboBoxItem>
+            <ComboBoxItem>19:15</ComboBoxItem>
             <ComboBoxItem>19:30</ComboBoxItem>
+            <ComboBoxItem>19:45</ComboBoxItem>
             <ComboBoxItem>20:00</ComboBoxItem>
+            <ComboBoxItem>20:15</ComboBoxItem>
             <ComboBoxItem>20:30</ComboBoxItem>
+            <ComboBoxItem>20:45</ComboBoxItem>
             <ComboBoxItem>21:00</ComboBoxItem>
         </ComboBox>
 

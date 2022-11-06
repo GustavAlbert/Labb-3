@@ -25,6 +25,7 @@ namespace Labb_3
     {
         public List<Booking> Bookings { get; set; }
 
+
         public MainWindow()
         {
             InitializeComponent();
@@ -35,8 +36,10 @@ namespace Labb_3
             //Bookings.Add();
             //Bookings.Add();
 
+            //Bookings.
+
         }
-        
+
         private bool isTableAvailable(int tableNumber, DateTime timeSlot)
         {
             foreach (var booking in Bookings)
@@ -78,6 +81,8 @@ namespace Labb_3
 
         private void btnShowBookings_Click(object sender, RoutedEventArgs e)
         {
+            lstboxListBookings.Items.Clear();
+
             foreach (var Booking in Bookings)
             {
                 lstboxListBookings.Items.Add
@@ -90,7 +95,7 @@ namespace Labb_3
 
         private void btnCancelBooking_Click(object sender, RoutedEventArgs e)
         {
-
+            lstboxListBookings.Items.Remove(lstboxListBookings.SelectedItem.ToString);
         }
     }
 }

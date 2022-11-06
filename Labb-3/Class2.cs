@@ -24,6 +24,7 @@ namespace MyClasses_Labb3
         {
             string output = Date + ", " + Name + ", " + TableNumber + Time;
             return output;
+
         }
     }
 }
