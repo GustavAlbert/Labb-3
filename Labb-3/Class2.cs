@@ -23,11 +23,9 @@ namespace MyClasses_Labb3
 
         public override string ToString()
         {
-
-            return "Namn; " + Name +
-            " Datum; " + Date.ToShortDateString() + " Klockan " + Time +
-            " Bord " + TableNumber;
-
+            return "Datum; " + Date.ToShortDateString() + ", Klockan " + Time + "\n" +
+                    "Namn; " + Name + "\n" +
+                    "Bord " + TableNumber;
         }
     }
 }

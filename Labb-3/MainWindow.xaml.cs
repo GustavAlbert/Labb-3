@@ -54,27 +54,35 @@ namespace Labb_3
 
         private void btnbook_Click(object sender, RoutedEventArgs e)
         {
-            var timeSlot = dtpSelecter.SelectedDate.Value;
-
-            bool ifTableAvailable = isTableAvailable(Int32.Parse(ComboBoxTablenumber.Text), timeSlot);
-
-            if (ifTableAvailable)
+            try
             {
-                var presentBooking = new Booking
-                                (txtCustommerName.Text,
-                                Convert.ToInt32(ComboBoxTablenumber.Text),
-                                dtpSelecter.SelectedDate.Value,
-                                ComboBoxTime.Text);
+                var timeSlot = dtpSelecter.SelectedDate.Value;
+                bool ifTableAvailable = isTableAvailable(Int32.Parse(ComboBoxTablenumber.Text), timeSlot);
 
-                Bookings.Add(presentBooking);
+                if (ifTableAvailable)
+                {
+                    var presentBooking = new Booking
+                                    (txtCustommerName.Text,
+                                    Convert.ToInt32(ComboBoxTablenumber.Text),
+                                    dtpSelecter.SelectedDate.Value,
+                                    ComboBoxTime.Text);
 
-                MessageBox.Show("Ditt bord har reserverats, hoppas du får en trevlig sittning");
+                    Bookings.Add(presentBooking);
 
+                    MessageBox.Show("Ditt bord har reserverats, hoppas du får en trevlig sittning");
+
+                }
+                else
+                {
+                    MessageBox.Show("Inga bord är tillgängliga vid " + ComboBoxTime.Text + ", välj en annan tid");
+                }
             }
-            else
+            catch (Exception MissingInputData)
             {
-                MessageBox.Show("Inga bord är tillgängliga vid " + ComboBoxTime.Text + ", välj en annan tid");
+                //MessageBox.Show(MissingInputData.Message.ToString(), "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Alla fält måste vara ifyllda för att göra en bokningsförfrågan", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+
         }
 
         private void btnShowBookings_Click(object sender, RoutedEventArgs e)

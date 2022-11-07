@@ -66,24 +66,24 @@
         <!-- COLUMN 4 -->
 
         <TextBlock 
-            Grid.Column="4" Grid.Row="2" Margin=""
+            Grid.Column="4" Grid.Row="2" Margin="0"
             Text="Datum" FontWeight="Bold" Foreground="White" >
         </TextBlock>
 
         <DatePicker 
-            Grid.Column="4" Grid.Row="4" Margin=""
+            Grid.Column="4" Grid.Row="4" Margin="0"
             x:Name="dtpSelecter"
             >
         </DatePicker>
 
         <TextBlock 
-            Grid.Column="4" Grid.Row="6" Margin=""
+            Grid.Column="4" Grid.Row="6" Margin="0"
             Text="Tid" FontWeight="Bold" Foreground="White" >
         </TextBlock>
 
         <ComboBox
             x:Name="ComboBoxTime"
-            Grid.Column="4" Grid.Row="8" Margin="" >
+            Grid.Column="4" Grid.Row="8" Margin="0" >
             <ComboBoxItem>17:00</ComboBoxItem>
             <ComboBoxItem>17:15</ComboBoxItem>
             <ComboBoxItem>17:30</ComboBoxItem>
@@ -108,7 +108,7 @@
             <!-- BOKA -->
             <Button
                 x:Name="btnbook" Content="Boka"
-                Grid.Column="4" Grid.Row="10" Margin=""
+                Grid.Column="4" Grid.Row="10" Margin="0"
                 Height="30" Click="btnbook_Click"
                 >
             </Button>
@@ -116,7 +116,7 @@
             <!-- VISA BOKNINGAR -->
             <Button
                 x:Name="btnShowBookings" Content="Visa Bokningar"
-                Grid.Column="4" Grid.Row="12" Margin=""
+                Grid.Column="4" Grid.Row="12" Margin="0"
                 Height="30" Click="btnShowBookings_Click"
                 >
             </Button>
@@ -124,7 +124,7 @@
             <!-- AVBOKA -->
             <Button
                 x:Name="btnCancelBooking" Content="Avboka" 
-                Grid.Column="4" Grid.Row="14" Margin=""
+                Grid.Column="4" Grid.Row="14" Margin="0"
                 Height="30" Click="btnCancelBooking_Click"
                 >
             </Button>
@@ -134,22 +134,22 @@
         <!-- COLUMN 6 -->
 
         <TextBlock 
-            Grid.Column="6" Grid.Row="2" Margin=""
+            Grid.Column="6" Grid.Row="2" Margin="0"
             Text="Namn" Foreground="White" FontWeight="Bold">
         </TextBlock>
 
-        <TextBox Grid.Column="6" Grid.Row="4" Margin=""
+        <TextBox Grid.Column="6" Grid.Row="4" Margin="0"
                  x:Name="txtCustommerName"
                  />
 
         <TextBlock 
-            Grid.Column="6" Grid.Row="6" Margin=""
+            Grid.Column="6" Grid.Row="6" Margin="0"
             Text="Bordsnummer" Foreground="White" FontWeight="Bold" >
         </TextBlock>
 
         <ComboBox 
             x:Name="ComboBoxTablenumber"
-            Grid.Column="6" Grid.Row="8" Margin=""
+            Grid.Column="6" Grid.Row="8" Margin="0"
             >
             <GroupItem>1</GroupItem>
             <GroupItem>2</GroupItem>
