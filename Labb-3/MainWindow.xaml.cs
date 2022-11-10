@@ -25,7 +25,9 @@ namespace Labb_3
     public partial class MainWindow : Window
     {
         public List<Booking> Bookings { get; set; }
-
+        public int TableNumber { get; }
+        public int Time { get; }
+        public int Date { get; }
 
         public MainWindow()
         {
@@ -33,10 +35,12 @@ namespace Labb_3
 
             Bookings = new List<Booking>();
 
-            //Bookings.Add();
-            //Bookings.Add();
-            //Bookings.Add();
+            for (int iterator = 1; iterator <= 3; iterator++)
+            {
+                var booking = new Booking("Name" + Convert.ToString(iterator), 1, new DateTime(2022, 11, 11), Convert.ToString(16 + iterator) + ":00");
 
+                Bookings.Add(booking);
+            }
         }
 
         private bool isTableAvailable(int tableNumber, DateTime timeSlot)
@@ -104,6 +108,13 @@ namespace Labb_3
             {
                 Bookings.Remove(booking);
                 MessageBox.Show("Booking cancelled");
+
+                //    lstboxListBookings.Items.Clear();
+
+                //    foreach (var allbookings in Bookings)
+                //    {
+                //        lstboxListBookings.Items.Add(booking);
+                //    }
             }
             else MessageBox.Show("Välj en bokning");
         }

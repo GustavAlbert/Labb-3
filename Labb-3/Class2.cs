@@ -21,6 +21,8 @@ namespace MyClasses_Labb3
             Time = time;
         }
 
+        
+
         public override string ToString()
         {
             return "Datum; " + Date.ToShortDateString() + ", Klockan " + Time + "\n" +
